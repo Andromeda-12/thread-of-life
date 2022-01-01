@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+
+.header {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 0 50px;
+  
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $text-color;
+
+  border-bottom: 2px solid ;
+}

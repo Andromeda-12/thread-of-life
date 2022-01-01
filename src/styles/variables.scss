@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+$primary-color: #221c35;
+$secondary-color: #ad24fd;
+
+$darken-secondary-color: darken($secondary-color, 15%);
+
+$text-color: white;
+
+$font-size: calc(10px + 2vmin);
+$font-family: 'Montserrat', sans-serif;
