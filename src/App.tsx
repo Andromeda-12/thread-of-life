@@ -1,39 +1,34 @@
 import React from 'react';
 import Header from './components/Header';
-import { Layout, Alert, Col } from 'antd';
+import { Heading, Title, TitleSection, Subtitle } from './components/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import './pages/Main.scss'
 
 function App() {
   return (
     <div className="App">
-        <Header>Header</Header>
+      <Container>
+        <Header></Header>
 
-        <Col span="8" offset="8">
-        <Alert message="Authentication Failed" type="warning"></Alert>
-        </Col>
-          <header className="App-header">
-            <p>
-              Edit <code>src/App.tsx</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://ru.reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+        <Grid container sx={{ height: '70vh' }} justifyContent="center" alignItems="center">
+          <Grid item textAlign="center">
+            <Heading>
+              Thread of life
+            </Heading>
 
-            <a
-              className="App-link"
-              href="https://ru.reactjs1.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
+            <Title>
+              Show your <TitleSection>life</TitleSection>
+            </Title>
+
+            <Subtitle>
+              These are web applications where you can save, describe and share your best moments from your life!
+            </Subtitle>
+          </Grid>
+        </Grid>
+      </Container>
     </div >
-  );
+  )
 }
 
 export default App;
