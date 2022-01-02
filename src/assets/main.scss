@@ -1,8 +1,8 @@
 @import "./variables.scss";
 
 html {
-    font-family: $font-family;
-    box-sizing: border-box;
+  font-family: $font-family;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,7 +16,8 @@ body {
 }
 
 a {
-  color: $secondary-color;
+  color: var(--mainColor);
+  // color: $secondary-color;
   text-decoration: none;
 }
 

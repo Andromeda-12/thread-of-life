@@ -1,0 +1,16 @@
+@import "../../assets/variables.scss";
+
+
+.theme-button{
+  color: $text-color !important;
+
+  border-color: $darken-secondary-color !important;
+}
+
+.theme-button.MuiButton-contained {
+  background: $secondary-color !important;
+}
+
+.theme-picker {
+  width: 300px !important;
+}

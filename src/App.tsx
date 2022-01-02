@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import ThemeChanger from './components/ThemeChanger';
 import { Heading, Title, TitleSection, Subtitle } from './components/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -24,6 +25,7 @@ function App() {
             <Subtitle>
               These are web applications where you can save, describe and share your best moments from your life!
             </Subtitle>
+
           </Grid>
         </Grid>
       </Container>
