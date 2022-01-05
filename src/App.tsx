@@ -2,16 +2,16 @@ import React from 'react';
 import Header from './components/Header';
 import Container from '@mui/material/Container';
 import Main from './pages/Main';
-// import Settings from './pages/Settings';
+import Settings from './pages/Settings';
 import NoMatch from './pages/NoMatch';
 import Footer from './components/Footer'
 import { Route, Routes, Link } from 'react-router-dom'
-// import { setTheme } from './shared/theme'
+import { setTheme } from './shared/theme'
 import './pages/Main.scss'
 
 class App extends React.Component {
   componentDidMount() {
-    // setTheme()
+    setTheme()
   }
 
   render() {
@@ -22,7 +22,7 @@ class App extends React.Component {
 
           <Routes>
             <Route path="/" element={<Main />} />
-            {/* <Route path="/settings" element={<Settings />} /> */}
+            <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<NoMatch />} />
           </Routes>
 
