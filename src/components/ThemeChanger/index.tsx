@@ -58,7 +58,6 @@ const ThemeChanger: FC = () => {
           <ChromePicker
             className="theme-picker"
             color={color}
-            onChange={changeCompleteHandler}
             disableAlpha
           />
         </Grid>
