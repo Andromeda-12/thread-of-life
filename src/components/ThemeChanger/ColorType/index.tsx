@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 import Color from '../Color'

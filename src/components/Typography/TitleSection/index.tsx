@@ -1,11 +1,7 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import './TitleSection.scss'
 
-interface TitleSectionProps {
-  children: React.ReactNode,
-}
-
-const TitleSection: FC<TitleSectionProps> = ({ children }) => (
+const TitleSection: FC = ({ children }) => (
   <span className='title_section'>
     {children}
   </span>

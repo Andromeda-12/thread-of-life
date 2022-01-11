@@ -1,0 +1,41 @@
+@import "../assets/variables.scss";
+
+.form {
+  &__avatar {
+    background-color: $secondary-color !important;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    font-weight: 400 !important;
+  }
+
+  &__checkbox {
+    color: $secondary-color !important;
+  }
+
+  &__button {
+    margin-top: 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $secondary-color !important;
+    text-decoration: underline;
+  }
+
+  &__input {
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+      border-color: $secondary-color !important;
+    }
+
+    .css-1kty9di-MuiFormLabel-root-MuiInputLabel-root,
+    .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root,
+    // .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root, 
+    .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input, 
+    .css-1kty9di-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+      color: $text-color !important;
+    }
+  }
+}

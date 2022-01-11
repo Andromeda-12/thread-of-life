@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Typography, { TypographyProps } from '@mui/material/Typography';
 import './Title.scss'
 
-const Title: FC<TypographyProps> = ({ children }) => (
-  <Typography className='title' variant="h4" gutterBottom>
+const Title: FC<TypographyProps> = ({ children, variant, className }) => (
+  <Typography className={['title', className].join(' ')} variant={variant} gutterBottom>
     {children}
   </Typography>
 )

@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import ColorType from './ColorType';
 import { Button } from '@mui/material';
@@ -10,7 +10,8 @@ import './ThemeChanger.scss'
 
 
 const ThemeChanger: FC = () => {
-  const currentPrimaryColor = !!localStorage.getItem('--primary-color') ? localStorage.getItem('--primary-color') : ''
+  const primaryColor = localStorage.getItem('--primary-color')
+  const currentPrimaryColor = !!primaryColor ? primaryColor : ''
   const [color, setColor] = useState(currentPrimaryColor!)
   const [currentColorType, setCurrentColorType] = useState(Color.Primary)
 
@@ -23,18 +24,15 @@ const ThemeChanger: FC = () => {
     setCurrentColorType(color)
   }
 
-
   useEffect(() => {
     const style = document.documentElement.style
-
+    
     if (currentColorType === Color.Primary) {
       style.setProperty("--primary-color", color);
 
       localStorage.setItem("--primary-color", color)
     }
     else if (currentColorType === Color.Secondary) {
-      console.log(currentColorType)
-      console.log(color)
       style.setProperty("--secondary-color", color);
       style.setProperty("--darken-secondary-color", LightenDarkenColor(color, -15));
 
@@ -48,8 +46,7 @@ const ThemeChanger: FC = () => {
       localStorage.setItem("--text-color", color)
       localStorage.setItem("--darken-text-color", LightenDarkenColor(color, -15))
     }
-  },
-    [color])
+  }, [color]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Grid container justifyContent="center" alignItems="center">
@@ -69,9 +66,9 @@ const ThemeChanger: FC = () => {
           <Grid item>
             <Button
               className="theme-button"
+              variant="contained"
               onClick={resetTheme}
               style={{ marginBottom: 20 }}
-              variant="contained"
             >
               Reset colors
             </Button>
@@ -88,7 +85,7 @@ const ThemeChanger: FC = () => {
         </Grid>
       </Grid>
     </Grid>
-  );
+  )
 }
 
 export default ThemeChanger

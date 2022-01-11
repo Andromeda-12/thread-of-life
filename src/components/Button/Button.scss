@@ -1,12 +1,18 @@
 @import "../../assets/variables.scss";
 
 .button {
-  // background: $secondary-color !important;
-  color: $darken-secondary-color !important;
+  color: $text-color !important;
 
   border-color: $darken-secondary-color !important;
   border-width: 2px !important;
-  border-radius: 20px !important;
+
+  &_rounded {
+    border-radius: 20px !important;
+  }
+
+  &_text {
+    border: none !important;
+  }
 }
 
 .button:hover {

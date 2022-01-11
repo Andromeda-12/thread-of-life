@@ -1,13 +1,13 @@
-import React from 'react';
-import Header from './components/Header';
-import Container from '@mui/material/Container';
-import Main from './pages/Main';
-import Settings from './pages/Settings';
-import NoMatch from './pages/NoMatch';
-import Footer from './components/Footer'
-import { Route, Routes, Link } from 'react-router-dom'
+import React, { Suspense } from 'react';
+import DefayultLayout from './layouts/DefaultLayout'
+import { Route, Routes } from 'react-router-dom'
 import { setTheme } from './shared/theme'
-import './pages/Main.scss'
+import Spiner from './components/Spiner';
+const Main = React.lazy(() => import('./pages/Main'));
+const Settings = React.lazy(() => import('./pages/Settings'));
+const SignIn = React.lazy(() => import('./pages/SignIn'));
+const SignUp = React.lazy(() => import('./pages/SignUp'));
+const NoMatch = React.lazy(() => import('./pages/NoMatch'));
 
 class App extends React.Component {
   componentDidMount() {
@@ -17,17 +17,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Container>
-          <Header></Header>
-
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="*" element={<NoMatch />} />
-          </Routes>
-
-          <Footer />
-        </Container>
+        <DefayultLayout>
+          <Suspense fallback={<Spiner />}>
+            <Routes>
+              <Route path="/" element={<Main />} />
+              <Route path="/settings" element={<Settings />}/>
+              <Route path="/sign-in" element={<SignIn />} />
+              <Route path="/sign-up" element={<SignUp />} />
+              <Route path="*" element={<NoMatch />} />
+            </Routes>
+          </Suspense>
+        </DefayultLayout>
       </div >
     )
   }

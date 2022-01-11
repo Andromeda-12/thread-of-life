@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Typography, { TypographyProps } from '@mui/material/Typography';
 import './Heading.scss'
 
