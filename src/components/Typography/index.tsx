@@ -1,4 +1,3 @@
-
 import Heading from './Heading'
 import Title from './Title'
 import TitleSection from './TitleSection'

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Typography, { TypographyProps } from '@mui/material/Typography';
-import './Subtitle.scss'
+import './style.scss'
 
 const Subtitle: FC<TypographyProps> = ({ children }) => (
   <Typography className='subtitle' variant="subtitle1" gutterBottom>

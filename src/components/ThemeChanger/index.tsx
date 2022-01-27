@@ -6,7 +6,7 @@ import { ChromePicker } from 'react-color'
 import { LightenDarkenColor } from 'lighten-darken-color';
 import { resetTheme } from '../../shared/theme'
 import Color from './Color'
-import './ThemeChanger.scss'
+import './style.scss'
 
 
 const ThemeChanger: FC = () => {

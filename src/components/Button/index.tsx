@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import MUIButton from '@mui/material/Button';
 import { SxProps } from '@mui/system'
-import './Button.scss'
+import './style.scss'
 
 interface ButtonProps {
   children: React.ReactNode,

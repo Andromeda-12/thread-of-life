@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import './Spiner.scss'
+import './style.scss'
 
 const Spiner: FC = () => (
   <div className="spiner-wrap">

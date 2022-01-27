@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './TitleSection.scss'
+import './style.scss'
 
 const TitleSection: FC = ({ children }) => (
   <span className='title_section'>

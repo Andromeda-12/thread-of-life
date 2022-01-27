@@ -6,7 +6,7 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import SvgIcon from '@mui/material/SvgIcon';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import './Footer.scss'
+import './style.scss'
 
 function Copyright() {
   return (
